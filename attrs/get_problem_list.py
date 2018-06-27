@@ -17,3 +17,4 @@ for i in soup.find_all(name='tr'):
     f.write('# '+url)
     f.close()
 
+```
