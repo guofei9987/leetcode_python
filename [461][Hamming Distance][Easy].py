@@ -20,7 +20,7 @@ class Solution(object):
         return hamming_distance
 
 
-# :gufoei: 他们的更简洁的答案
+# :guofei: a better answer from others
 class Solution(object):
     def hammingDistance(self, x, y):
         """

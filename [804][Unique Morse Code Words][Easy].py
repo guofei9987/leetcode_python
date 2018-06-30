@@ -10,7 +10,7 @@ class Solution(object):
         morse_list = [".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.",
                       "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.."]
         morse2letter = dict(zip(letter_list, morse_list))
-        morse_list = set() # guofei: 这里用set比用list快相当多
+        morse_list = set() # guofei: ues set rather than list,speed is much faster
         for word in words:
             morse_tmp = ''
             for i in word:
