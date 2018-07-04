@@ -10,3 +10,11 @@ a1,a2,a3,a4=map(moves.count,'UDLR')
 a=1234
 [int(i) for i in str(a)]
 ```
+
+
+
+
+https://leetcode.com/problems/longest-common-prefix/discuss/6918/Short-Python-Solution
+https://leetcode.com/problems/longest-common-prefix/discuss/6911/Simple-Python-solution
+
+https://leetcode.com/problems/single-number/solution/
