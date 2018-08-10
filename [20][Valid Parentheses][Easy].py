@@ -18,3 +18,30 @@ class Solution(object):
             if n2 == n1: return False
         if len(s_list) == 1: return False
         return True
+
+
+class Solution:
+    def isValid(self, s):
+        """
+        :type s: str
+        :rtype: bool
+        """
+        dict_parentheses={'}':'{',')':'(',']':'['}
+        left_parentheses={'{','[','('}
+        stack=[]
+        for i in s:
+            if i in left_parentheses:
+                stack.append(i)
+            elif i in dict_parentheses:
+                if len(stack)==0:
+                    return False
+                elif stack[-1]==dict_parentheses[i]:
+                    stack.pop()
+                else:
+                    return False
+        if len(stack)>0:
+            return False
+        return True
+
+
+Solution().isValid('[()]')

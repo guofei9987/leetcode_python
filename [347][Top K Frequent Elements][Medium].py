@@ -1,32 +1,16 @@
 # https://leetcode.com/problems/top-k-frequent-elements
 
-def guess(num):
-    right_num=6
-    if num<right_num:
-        return 1
-    elif num>right_num:
-        return -1
-    else:
-        return 0
 
-
-class Solution(object):
-    def guessNumber(self, n):
+class Solution:
+    def topKFrequent(self, nums, k):
         """
-        :type n: int
-        :rtype: int
+        :type nums: List[int]
+        :type k: int
+        :rtype: List[int]
         """
-        left,right=1,n
-        while left<right:
-            mid=(left+right)//2
-            guess_num=guess(mid)
-            if guess_num==0:
-                return mid
-            elif guess_num<0:
-                right=mid-1
-            else:left=mid+1
-        return left
+        import collections
+        nums_dict=collections.Counter(nums)
+        soted_dict= sorted(nums_dict.items(),reverse=True,key=lambda x:x[1])[:k]
+        return [x[0] for x in soted_dict]
 
-
-Solution().guessNumber(10)
-
+Solution().topKFrequent(nums=[1,1,1,2,2,3],k=2)
